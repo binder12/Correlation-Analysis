@@ -15,10 +15,10 @@
 
 \begin{enumerate}
     \item Discuss how SuperCDMS is a collaboration designed to search for WIMPs
-    \item Describe SuperCDMS detectors and what kind of energy range WIMPs they search for 
+    \item Describe SuperCDMS detectors and what kind of energy range WIMPs they search for
         + Talk about the iZIP detector design and how these smart detectors allow SuperCDMS to target and go after low mass WIMPs –   >6GeV/c2
         + Describe the need for cryogenic temperatures and how these are achieved
-        +--	This topic will be describing the fridge system which is a key component of my thesis, therefore it will serve as a segue to my next section 
+        +--	This topic will be describing the fridge system which is a key component of my thesis, therefore it will serve as a segue to my next section
 \end{enumerate}
 
 \subsection{	Why is background noise important to SuperCDMS and why would the fridge cause this background noise}
@@ -26,11 +26,13 @@ Here is an example of a citation \cite{pyle2012}.
 
 Here is an example of a reference.  As discussed in Section \ref{sec:darkmatter}, which makes use of the label in that section.
 
-i.	Discuss how noise affects result sensitivity and by being able to reduce noise we can improve results 
+\begin{enumerate}
+  \item	Discuss how noise affects result sensitivity and by being able to reduce noise we can improve results
 
-ii.	The fridge would cause noise from: Electronic connection, temperature rises, or from electric fields
+  \item The fridge would cause noise from: Electronic connection, temperature rises, or from electric fields
+\end{enumerate}
 
-\section{Experiment and methods} 
+\section{Experiment and methods}
 
 \subsection{Discuss setup and how this was to achieve my desired goal of quantifying noise sources}
 i.	I used matlab and MySQL as my primary tools for this project; MySQL was the database in which all the SuperCDMS data was stored and Matlab was used to run analysis on the data
@@ -39,20 +41,20 @@ i.	I used matlab and MySQL as my primary tools for this project; MySQL was the d
 i.	The first set of data that I was interested in was the CDMS fridge data. The Fridge data I examined is from Runs 134 i.e. the data comes from only a few years ago
 
 ii.	I wanted to quantify noise so I built scripts in matlab to pull data from the MySQL and average them.
-1.	We pulled all the data from sql but in the interest of time and to make the data more user friendly we averaged data points every 1 minute. This time was chosen because it would not compromise data swings but would make data sizes for large runs manageable to use. 
+1.	We pulled all the data from sql but in the interest of time and to make the data more user friendly we averaged data points every 1 minute. This time was chosen because it would not compromise data swings but would make data sizes for large runs manageable to use.
 
 \subsection{Pulling data from the SuperCDMS runs}
-i.	The next step was to build a retrieval mechanism for the CDMS data. 
+i.	The next step was to build a retrieval mechanism for the CDMS data.
 1.	This data was important because it would be used to compare with the Fridge data to discover if there was a pattern for noise.
 
 2.	The original data retrieval script was altered to both pull data from the Fridge and CDMS files
 
-3.	The data we pulled was the standard deviation for the pre-pulse baseline. The reason this was the vest option was it is a fairly consistent data set with a relatively flat standard, which would make looking for a noise culprit much more easier. 
+3.	The data we pulled was the standard deviation for the pre-pulse baseline. The reason this was the vest option was it is a fairly consistent data set with a relatively flat standard, which would make looking for a noise culprit much more easier.
 
 ii.	Once data was pulled it was compared with the database to make sure it was all accurate
 
 \subsection{Layering the SuperCDMS data with the Fridge Data}
-i.	This step was required and very difficult because both sets of information came from different sources so they needed to be lined up so we could analyze it accurately. 
+i.	This step was required and very difficult because both sets of information came from different sources so they needed to be lined up so we could analyze it accurately.
 
 ii.	In order to do this we converted both datasets’ timestamps to unixtime and then lined them up. This method proved very effective
 
