@@ -1,38 +1,38 @@
 \section{Introduction}
-a.	What is Dark matter and why is it important to us
+\subsection{What is Dark matter and why is it important to us}
 
 i.	Briefly discuss how dark matter fits in to the cosmic scale i.e. abundance compared to dark energy and “Normal” matter
 ii.	Discuss the theory of dark matter and that one of the most probable candidates is a particle known as a WIMP (weakly interactive massive particle)
 iii.	Discuss in detail why the WIMP particle is the best candidate (all of the different physics questions it solves)
 iv.	Discuss the multiple ways people are searching for these WIMPs –this will be used as a segue into the next section
 
-b.	What is CDMS and why are they important
+\subsection{What is CDMS and why are they important}
 
 i.	Discuss how SuperCDMS is a collaboration designed to search for WIMPs
 ii.	Describe SuperCDMS detectors and what kind of energy range WIMPs they search for 
-1.	Talk about the iZIP detector design and how these smart detectors allow SuperCDMS to target and go after low mass WIMPs –   >6GeV/c2  
+1. Talk about the iZIP detector design and how these smart detectors allow SuperCDMS to target and go after low mass WIMPs –   >6GeV/c2  
 
-2.	Describe the need for cryogenic temperatures and how these are achieved
+2. Describe the need for cryogenic temperatures and how these are achieved
 
 a.	This topic will be describing the fridge system which is a key component of my thesis, therefore it will serve as a segue to my next section 
 
-c.	Why is background noise important to SuperCDMS and why would the fridge cause this background noise
+\subsection{	Why is background noise important to SuperCDMS and why would the fridge cause this background noise}
 i.	Discuss how noise affects result sensitivity and by being able to reduce noise we can improve results 
 
 ii.	The fridge would cause noise from: Electronic connection, temperature rises, or from electric fields
 
 \section{Experiment and methods} 
 
-a.	Discuss setup and how this was to achieve my desired goal of quantifying noise sources
+\subsection{Discuss setup and how this was to achieve my desired goal of quantifying noise sources}
 i.	I used matlab and MySQL as my primary tools for this project; MySQL was the database in which all the SuperCDMS data was stored and Matlab was used to run analysis on the data
 
-b.	Pulling CDMS data from MySQL
+\subsection{Pulling CDMS data from MySQL}
 i.	The first set of data that I was interested in was the CDMS fridge data. The Fridge data I examined is from Runs 134 i.e. the data comes from only a few years ago
 
 ii.	I wanted to quantify noise so I built scripts in matlab to pull data from the MySQL and average them.
 1.	We pulled all the data from sql but in the interest of time and to make the data more user friendly we averaged data points every 1 minute. This time was chosen because it would not compromise data swings but would make data sizes for large runs manageable to use. 
 
-c.	Pulling data from the SuperCDMS runs
+\subsection{Pulling data from the SuperCDMS runs}
 i.	The next step was to build a retrieval mechanism for the CDMS data. 
 1.	This data was important because it would be used to compare with the Fridge data to discover if there was a pattern for noise.
 
@@ -42,14 +42,14 @@ i.	The next step was to build a retrieval mechanism for the CDMS data.
 
 ii.	Once data was pulled it was compared with the database to make sure it was all accurate
 
-d.	Layering the SuperCDMS data with the Fridge Data
+\subsection{Layering the SuperCDMS data with the Fridge Data}
 i.	This step was required and very difficult because both sets of information came from different sources so they needed to be lined up so we could analyze it accurately. 
 
 ii.	In order to do this we converted both datasets’ timestamps to unixtime and then lined them up. This method proved very effective
 
 iii.	We checked specific points to prove the data was lined up accordingly
 
-e.	Removing outliers, finding correlation coefficients and doing a chi square analysis
+\subsection{Removing outliers, finding correlation coefficients and doing a chi square analysis}
 i.	The first step was to remove all outliers
 1.	This step was done by taking the standard deviation and removing all data which we defined as an outlier past 3 sigma
 
@@ -62,10 +62,10 @@ ii.	The next step was to compare large sets of data and determine if there was a
 2.	The purpose was to find if any variables were correlated with one another i.e. when the temperature on the rack increases the noise increase in the pot
 iii.	Finally we ran a chi squared analysis in order to find the most interesting correlations
 1.	***This is still under work****
-\section{Analysis} 
-a.	In this section I will discuss the results of my data which will be describing the correlations we found and whether or not they were known or not
-b.	If we find one that was previously not expected I will describe why I believe it is causing noise and will give more detailed information as to prove that it was not simply an anomaly in my data
+\section{Analysis}
+\subsection{In this section I will discuss the results of my data which will be describing the correlations we found and whether or not they were known or not}
+\subsection{If we find one that was previously not expected I will describe why I believe it is causing noise and will give more detailed information as to prove that it was not simply an anomaly in my data}
 \section{Conclusion}
-a.	I will wrap up and summarize the results of my experiment
+\subsection{I will wrap up and summarize the results of my experiment}
 
-b.	I will discuss how this project could improve going forward as well as the usefulness of this information to the next generation experiment at Snolab
+\subsection{I will discuss how this project could improve going forward as well as the usefulness of this information to the next generation experiment at Snolab}
